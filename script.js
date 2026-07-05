@@ -76,7 +76,7 @@ const prompts = [
     type: "Free",
     date: "2026-07-02",
     accent: ["#8b5cf6", "#06b6d4"],
-    image: "assets/hero/preview.png",
+    image: "h.png",
     imageAlt: "Brushstroke character portrait artwork"
   },
   {
@@ -364,7 +364,6 @@ function renderPrompts() {
         </div>
         <button class="copy-btn" type="button" data-title="${escapeHtml(item.title)}" data-prompt="${escapeHtml(item.prompt)}">Copy Prompt</button>
         <div class="card-meta">
-          <span class="author">By ${escapeHtml(item.author)}</span>
           <span>${formatNumber(item.views)} views / ${formatNumber(item.copies)} copies</span>
         </div>
       </div>
