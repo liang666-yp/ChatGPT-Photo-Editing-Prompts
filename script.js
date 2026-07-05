@@ -32,11 +32,11 @@ const prompts = [
     imageAlt: "ChatGPT product photo editing prompt with premium lighting"
   },
   {
-    title: "Cinematic Street Portrait",
+    title: "Cinematic Reading Portrait",
     category: "Cinematic",
     tags: ["Men", "Women", "Portrait", "Cinematic"],
     description: "Create a quiet vintage reading portrait with moody depth, soft texture, and cinematic realism.",
-    prompt: "Transform the uploaded portrait into a cinematic vintage reading scene. Preserve the person's facial identity, clothing silhouette, pose, book, and seated posture. Add soft directional light, a muted brick or garden-wall background, shallow depth of field, subtle film grain, and refined warm shadows. Keep the scene photorealistic, calm, literary, and editorial without changing the person or making the book text readable.",
+    prompt: "Transform the uploaded portrait into a quiet cinematic reading scene. Preserve the person's facial identity, downcast expression, seated pose, blue sari or clothing style, book, hands, and bench posture. Add a weathered brick garden wall, soft natural side light, shallow depth of field, muted warm shadows, subtle film grain, and a calm literary mood. Keep the result photorealistic and editorial, with no readable book text, no face changes, and no artificial glamour retouching.",
     models: ["ChatGPT", "Gemini", "Midjourney"],
     author: "Aya Brooks",
     views: 27700,
@@ -48,11 +48,11 @@ const prompts = [
     imageAlt: "ChatGPT cinematic portrait editing prompt preview"
   },
   {
-    title: "Social Media Travel Shot",
-    category: "Lifestyle",
-    tags: ["Travel", "Women", "Men", "Social Media"],
+    title: "Double Exposure Profile Portrait",
+    category: "Social Media",
+    tags: ["Women", "Men", "Portrait", "Social Media"],
     description: "Turn a casual portrait into a polished double-exposure profile image with social-ready depth.",
-    prompt: "Edit the uploaded portrait into a clean double-exposure creator profile image. Preserve the person's identity, smile, hairstyle, clothing, and seated pose. Add a large soft monochrome portrait silhouette in the background, keep the foreground subject in natural color, improve skin tone and hair detail, and use a refined gray studio backdrop. Make it suitable for a polished social profile or creator banner without adding text, logos, or artificial facial changes.",
+    prompt: "Edit the uploaded portrait into a clean double-exposure profile image. Preserve the person's identity, bright smile, upward gaze, long hair, black top, seated pose, and relaxed arm placement. Add a large soft monochrome portrait silhouette in the gray background, keep the foreground subject in natural color, refine skin tone and hair detail, and maintain a calm studio feel. Make it suitable for a polished social profile or creator banner without adding text, logos, or artificial facial changes.",
     models: ["ChatGPT", "Gemini"],
     author: "Niko Ray",
     views: 14300,
@@ -64,11 +64,11 @@ const prompts = [
     imageAlt: "ChatGPT social media portrait editing prompt preview"
   },
   {
-    title: "Brushstroke Character Portrait",
-    category: "Digital Art",
-    tags: ["Women", "Portrait", "Fashion"],
-    description: "Turn a portrait into a polished character-design artwork with expressive brush texture.",
-    prompt: "Transform the uploaded portrait into a refined character-design illustration with expressive brushstrokes. Preserve the person's facial identity, eye shape, hairstyle, pose, and natural expression. Add luminous skin highlights, detailed flowing hair, soft painterly edges, and a pale textured studio background. Keep the image elegant, high-resolution, and editorial, with no text, watermark, distorted features, or overly cartoonish proportions.",
+    title: "Natural Smile Portrait Retouch",
+    category: "Portraits",
+    tags: ["Women", "Portrait", "Lifestyle"],
+    description: "Create a bright lifestyle portrait with natural smile, warm light, and clean background blur.",
+    prompt: "Enhance the uploaded portrait into a bright natural lifestyle headshot. Preserve the person's facial identity, wide smile, red lipstick, blonde hair, red turtleneck, earrings, and close-up framing. Improve eye clarity, teeth brightness, skin tone, hair detail, and soft outdoor background blur while keeping the image realistic and cheerful. Maintain warm flattering light and natural texture, with no face reshaping, no plastic skin, no added text, and no artificial studio backdrop.",
     models: ["ChatGPT", "Gemini"],
     author: "Lena Park",
     views: 19800,
@@ -77,7 +77,7 @@ const prompts = [
     date: "2026-07-02",
     accent: ["#8b5cf6", "#06b6d4"],
     image: "h.png",
-    imageAlt: "ChatGPT brushstroke character portrait editing prompt example"
+    imageAlt: "ChatGPT natural smile portrait retouch prompt example"
   },
   {
     title: "Old Photo Restoration",
@@ -100,7 +100,7 @@ const prompts = [
     category: "Fashion",
     tags: ["Women", "Fashion", "Portrait"],
     description: "Create a painterly fashion portrait with rich wardrobe texture and gallery-style color.",
-    prompt: "Transform the uploaded portrait into a painterly fashion editorial artwork. Preserve the model's face, gaze, hair shape, body proportions, and outfit structure. Enhance the jacket with expressive brush textures, layered muted color, subtle gold accents, and a tasteful abstract studio backdrop. Keep the face elegant and detailed, avoid cartoon exaggeration, and make the final image feel like a premium magazine illustration.",
+    prompt: "Transform the uploaded portrait into a painterly fashion editorial artwork. Preserve the model's centered front-facing pose, blue eyes, black hair, layered necklaces, white top, and denim jacket structure. Enhance the jacket and background with expressive brush textures, muted teal, rust, cream, and beige paint layers, subtle gold accents, and delicate floral sketch details. Keep the face elegant and detailed, avoid cartoon exaggeration, and make the final image feel like a premium magazine illustration with no text or watermark.",
     models: ["ChatGPT", "Midjourney"],
     author: "Sofia Lane",
     views: 24800,
@@ -132,7 +132,7 @@ const prompts = [
     category: "Business",
     tags: ["Men", "Women", "Studio Headshot", "Portrait"],
     description: "Create a premium black-and-white executive headshot with strong eye contact and authority.",
-    prompt: "Convert the uploaded portrait into a high-end black-and-white executive headshot. Preserve the person's facial identity, age, beard, hair shape, expression, and hand pose. Add dramatic studio lighting, deep black background, crisp eye detail, refined skin texture, and elegant contrast. Keep the portrait realistic, authoritative, and suitable for LinkedIn, speaker bios, or executive profiles without over-smoothing the skin.",
+    prompt: "Convert the uploaded portrait into a high-end black-and-white executive headshot. Preserve the person's facial identity, mature age, swept-back hair, beard texture, direct eye contact, black turtleneck, and hand-on-chin pose. Add dramatic studio lighting, a deep black background, crisp eye detail, refined skin texture, strong cheekbone contrast, and elegant monochrome tonality. Keep the portrait realistic, authoritative, and suitable for LinkedIn, speaker bios, or executive profiles without over-smoothing skin or changing the expression.",
     models: ["ChatGPT", "Gemini"],
     author: "Theo Kim",
     views: 35600,
@@ -228,7 +228,7 @@ const prompts = [
     category: "Cinematic",
     tags: ["Cinematic", "Portrait", "Men", "Women"],
     description: "Create a romantic cinematic couple portrait with glowing bokeh and warm rim light.",
-    prompt: "Transform the uploaded couple photo into a romantic cinematic night portrait. Preserve both people's identities, facial features, pose, clothing, and close emotional framing. Add a warm circular rim light behind them, soft heart-shaped bokeh, shallow depth of field, golden highlights, and realistic skin tones. Keep the scene elegant, intimate, and photographic without making the faces artificial or overly airbrushed.",
+    prompt: "Transform the uploaded couple photo into a romantic cinematic night portrait. Preserve both people's identities, facial features, close nose-to-nose pose, dark formal clothing, hair shape, and intimate side-profile framing. Add a warm circular rim light behind them, soft heart-shaped bokeh, shallow depth of field, golden edge highlights, and realistic skin tones. Keep the scene elegant, intimate, and photographic without making the faces artificial, changing the pose, or over-airbrushing the skin.",
     models: ["ChatGPT", "Midjourney"],
     author: "Rio Tan",
     views: 23100,
