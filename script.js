@@ -545,4 +545,151 @@ window.addEventListener("scroll", () => {
   document.getElementById("siteHeader").classList.toggle("scrolled", window.scrollY > 12);
 });
 
+function initMeteorCursor() {
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  const allowMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!finePointer || !allowMotion) {
+    return;
+  }
+
+  const canvas = document.createElement("canvas");
+  const comet = document.createElement("div");
+  const context = canvas.getContext("2d");
+  const points = [];
+  const maxPoints = 44;
+  const idleFade = 0.955;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let currentX = window.innerWidth / 2;
+  let currentY = window.innerHeight / 2;
+  let targetX = currentX;
+  let targetY = currentY;
+  let lastInput = 0;
+
+  canvas.className = "cursor-trail";
+  comet.className = "cursor-comet";
+  document.body.append(canvas, comet);
+
+  function resizeCanvas() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function drawTrail() {
+    context.clearRect(0, 0, width, height);
+
+    if (points.length < 3) {
+      return;
+    }
+
+    const head = points[points.length - 1];
+    const tail = points[0];
+    const totalLife = points.reduce((sum, point) => sum + point.life, 0) / points.length;
+    const gradient = context.createLinearGradient(tail.x, tail.y, head.x, head.y);
+    gradient.addColorStop(0, "rgba(124, 58, 237, 0)");
+    gradient.addColorStop(0.35, `rgba(139, 92, 246, ${totalLife * 0.18})`);
+    gradient.addColorStop(0.74, `rgba(236, 72, 153, ${totalLife * 0.44})`);
+    gradient.addColorStop(1, `rgba(255, 255, 255, ${totalLife * 0.78})`);
+
+    function tracePath() {
+      context.beginPath();
+      context.moveTo(points[0].x, points[0].y);
+
+      for (let index = 1; index < points.length - 2; index += 1) {
+        const midX = (points[index].x + points[index + 1].x) / 2;
+        const midY = (points[index].y + points[index + 1].y) / 2;
+        context.quadraticCurveTo(points[index].x, points[index].y, midX, midY);
+      }
+
+      const penultimate = points[points.length - 2];
+      context.quadraticCurveTo(penultimate.x, penultimate.y, head.x, head.y);
+    }
+
+    context.lineCap = "round";
+    context.lineJoin = "round";
+    context.strokeStyle = gradient;
+    context.shadowColor = `rgba(236, 72, 153, ${totalLife * 0.45})`;
+
+    tracePath();
+    context.lineWidth = 14;
+    context.shadowBlur = 22;
+    context.stroke();
+
+    tracePath();
+    context.lineWidth = 5;
+    context.shadowBlur = 8;
+    context.stroke();
+
+    context.shadowBlur = 0;
+  }
+
+  function animate() {
+    currentX += (targetX - currentX) * 0.34;
+    currentY += (targetY - currentY) * 0.34;
+
+    comet.style.left = `${currentX}px`;
+    comet.style.top = `${currentY}px`;
+
+    const stillMoving = performance.now() - lastInput < 130;
+    const lastPoint = points[points.length - 1];
+    const distance = lastPoint ? Math.hypot(currentX - lastPoint.x, currentY - lastPoint.y) : 999;
+
+    if (stillMoving || distance > 2.5) {
+      points.push({ x: currentX, y: currentY, life: 1 });
+    }
+
+    while (points.length > maxPoints) {
+      points.shift();
+    }
+
+    points.forEach((point) => {
+      point.life *= idleFade;
+    });
+
+    while (points.length && points[0].life < 0.04) {
+      points.shift();
+    }
+
+    drawTrail();
+    requestAnimationFrame(animate);
+  }
+
+  resizeCanvas();
+  animate();
+
+  window.addEventListener("resize", resizeCanvas);
+
+  window.addEventListener("pointermove", (event) => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    lastInput = performance.now();
+    document.body.classList.add("cursor-ready");
+  });
+
+  document.addEventListener("pointerover", (event) => {
+    if (event.target.closest("a, button, input, .prompt-card")) {
+      document.body.classList.add("cursor-active");
+    }
+  });
+
+  document.addEventListener("pointerout", (event) => {
+    const fromInteractive = event.target.closest("a, button, input, .prompt-card");
+    const toInteractive = event.relatedTarget?.closest?.("a, button, input, .prompt-card");
+
+    if (fromInteractive && fromInteractive !== toInteractive) {
+      document.body.classList.remove("cursor-active");
+    }
+  });
+}
+
+initMeteorCursor();
+
 renderPrompts();
