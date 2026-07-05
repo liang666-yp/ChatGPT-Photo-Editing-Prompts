@@ -720,6 +720,80 @@ h3 {
   font-weight: 900;
 }
 
+.seo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.seo-copy {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.seo-copy p,
+.seo-panel p,
+.usecase-card p,
+.faq-item p {
+  color: var(--muted);
+}
+
+.seo-panel,
+.usecase-card,
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-soft);
+}
+
+.seo-panel {
+  padding: 28px;
+}
+
+.seo-list {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seo-list li {
+  position: relative;
+  padding-left: 24px;
+  color: #51465f;
+}
+
+.seo-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+}
+
+.usecase-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.usecase-card,
+.faq-item {
+  padding: 24px;
+}
+
+.usecase-card h3,
+.faq-item h3 {
+  font-size: 1.08rem;
+}
+
 .testimonials-section {
   background:
     radial-gradient(circle at 12% 18%, rgba(236, 72, 153, 0.1), transparent 30%),
@@ -961,8 +1035,14 @@ h3 {
 
   .stats-grid,
   .library-grid,
-  .steps-grid {
+  .steps-grid,
+  .usecase-grid,
+  .faq-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seo-grid {
+    grid-template-columns: 1fr;
   }
 
   .prompt-grid {
@@ -1056,6 +1136,8 @@ h3 {
   .pack-grid,
   .testimonial-grid,
   .steps-grid,
+  .usecase-grid,
+  .faq-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }

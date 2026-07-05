@@ -13,7 +13,7 @@ const prompts = [
     date: "2026-06-24",
     accent: ["#7c3aed", "#ec4899"],
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Professional studio headshot portrait"
+    imageAlt: "ChatGPT professional studio headshot prompt example"
   },
   {
     title: "Luxury Product Photo",
@@ -29,7 +29,7 @@ const prompts = [
     date: "2026-06-20",
     accent: ["#4f46e5", "#f59e0b"],
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Luxury product photo with premium lighting"
+    imageAlt: "ChatGPT product photo editing prompt with premium lighting"
   },
   {
     title: "Cinematic Street Portrait",
@@ -45,7 +45,7 @@ const prompts = [
     date: "2026-07-01",
     accent: ["#111827", "#ec4899"],
     image: "assets/cards/a.png",
-    imageAlt: "Vintage cinematic woman reading on a bench"
+    imageAlt: "ChatGPT cinematic portrait editing prompt preview"
   },
   {
     title: "Social Media Travel Shot",
@@ -61,7 +61,7 @@ const prompts = [
     date: "2026-06-29",
     accent: ["#10b981", "#4f46e5"],
     image: "assets/cards/c.png",
-    imageAlt: "Double exposure social media portrait"
+    imageAlt: "ChatGPT social media portrait editing prompt preview"
   },
   {
     title: "Brushstroke Character Portrait",
@@ -77,7 +77,7 @@ const prompts = [
     date: "2026-07-02",
     accent: ["#8b5cf6", "#06b6d4"],
     image: "h.png",
-    imageAlt: "Brushstroke character portrait artwork"
+    imageAlt: "ChatGPT brushstroke character portrait editing prompt example"
   },
   {
     title: "Old Photo Restoration",
@@ -93,7 +93,7 @@ const prompts = [
     date: "2026-06-18",
     accent: ["#a16207", "#ef4444"],
     image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Vintage family photo restoration reference"
+    imageAlt: "ChatGPT old photo restoration prompt example"
   },
   {
     title: "Fashion Editorial Portrait",
@@ -109,7 +109,7 @@ const prompts = [
     date: "2026-06-30",
     accent: ["#be185d", "#7c3aed"],
     image: "assets/cards/e.png",
-    imageAlt: "Painterly fashion editorial portrait"
+    imageAlt: "ChatGPT fashion editorial photo editing prompt preview"
   },
   {
     title: "Couple Anniversary Photo",
@@ -125,7 +125,7 @@ const prompts = [
     date: "2026-06-22",
     accent: ["#fb7185", "#f59e0b"],
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Romantic couple anniversary photo"
+    imageAlt: "ChatGPT couple portrait photo editing prompt example"
   },
   {
     title: "LinkedIn Profile Photo",
@@ -141,7 +141,7 @@ const prompts = [
     date: "2026-07-03",
     accent: ["#2563eb", "#7c3aed"],
     image: "assets/cards/b.png",
-    imageAlt: "Black and white executive headshot"
+    imageAlt: "ChatGPT LinkedIn profile photo editing prompt example"
   },
   {
     title: "Food Photography Enhancement",
@@ -157,7 +157,7 @@ const prompts = [
     date: "2026-06-16",
     accent: ["#ea580c", "#10b981"],
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Enhanced food photography plate"
+    imageAlt: "ChatGPT food photography enhancement prompt example"
   },
   {
     title: "Pet Portrait Studio",
@@ -173,7 +173,7 @@ const prompts = [
     date: "2026-06-14",
     accent: ["#14b8a6", "#8b5cf6"],
     image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Pet portrait studio image"
+    imageAlt: "ChatGPT pet portrait studio editing prompt example"
   },
   {
     title: "Birthday Poster Edit",
@@ -189,7 +189,7 @@ const prompts = [
     date: "2026-06-27",
     accent: ["#ec4899", "#f59e0b"],
     image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Birthday celebration poster edit"
+    imageAlt: "ChatGPT birthday poster photo editing prompt preview"
   },
   {
     title: "Minimal Catalog Background",
@@ -205,7 +205,7 @@ const prompts = [
     date: "2026-06-26",
     accent: ["#6366f1", "#c084fc"],
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Minimal catalog product background"
+    imageAlt: "ChatGPT product background change prompt example"
   },
   {
     title: "Family Outdoor Portrait",
@@ -221,7 +221,7 @@ const prompts = [
     date: "2026-06-12",
     accent: ["#84cc16", "#f97316"],
     image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Family outdoor portrait"
+    imageAlt: "ChatGPT family outdoor portrait editing prompt example"
   },
   {
     title: "Neon Night Portrait",
@@ -237,7 +237,7 @@ const prompts = [
     date: "2026-06-28",
     accent: ["#7c3aed", "#06b6d4"],
     image: "assets/cards/d.png",
-    imageAlt: "Romantic cinematic couple portrait"
+    imageAlt: "ChatGPT cinematic couple photo editing prompt preview"
   },
   {
     title: "Creator Thumbnail Portrait",
@@ -253,7 +253,7 @@ const prompts = [
     date: "2026-06-25",
     accent: ["#ef4444", "#4f46e5"],
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Creator thumbnail portrait"
+    imageAlt: "ChatGPT creator thumbnail portrait prompt example"
   },
   {
     title: "Elegant Wedding Couple",
@@ -269,7 +269,7 @@ const prompts = [
     date: "2026-06-21",
     accent: ["#db2777", "#fbbf24"],
     image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Elegant wedding couple portrait"
+    imageAlt: "ChatGPT wedding couple photo editing prompt example"
   },
   {
     title: "Real Estate Room Refresh",
@@ -285,7 +285,7 @@ const prompts = [
     date: "2026-06-10",
     accent: ["#0f766e", "#6366f1"],
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=88",
-    imageAlt: "Bright real estate room refresh"
+    imageAlt: "ChatGPT real estate room photo editing prompt example"
   }
 ];
 
